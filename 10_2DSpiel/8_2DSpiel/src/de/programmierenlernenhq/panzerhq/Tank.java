@@ -7,6 +7,7 @@ import java.awt.geom.RoundRectangle2D;
  
 public class Tank extends GameObject{
      //test
+	//lh
     public static final double TURNING_VELOCITY = 0.03;
     public static final double DRIVING_VELOCIY = 2.00;
     public static final int AMMO_LOADING_TIME = 50;
