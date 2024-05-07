@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\Micha.Krautter\Documents\GitHub\testg4\.metadata\.plugins\org.eclipse.jdt.core
+3585775021.index
+1865797976.index
+4252772008.index
