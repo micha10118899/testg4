@@ -1,0 +1,164 @@
+ckage pack;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Class {
+	// 1 m
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String auswahlAufgabe = scanner.next();
+//Datentypen: int, double, boolean, char: Buchstaben, float, 
+		//String besteht aus mehreren Char
+		
+		if (auswahlAufgabe == "a") {
+			AufgabeA();
+		} 
+		
+		if (auswahlAufgabe.contains("b")) {
+			AufgabeB();
+		}
+		if ( auswahlAufgabe.contains("c")) {
+			AufgabeC();
+		}
+		if (auswahlAufgabe == "d") {
+			AufgabeD();
+		} 
+		
+		if (auswahlAufgabe.contains("e")) {
+			AufgabeE();
+		}
+		
+		if (auswahlAufgabe.contains("f")) {
+			AufgabeF();
+		}
+
+		switch(auswahlAufgabe)
+		{
+			case("a"):	AufgabeA(); break;
+			case("b"):	AufgabeB(); break;
+			case("c"):	AufgabeC(); break;
+			case("d"):	AufgabeD(); break;
+			case("e"):	AufgabeE(); break;
+			case("f"):	AufgabeF(); break;
+		}
+
+
+	}
+	// m2
+
+	public static void AufgabeA() {
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Bitte geben Sie eine Zahl ein: ");
+		int zahl = scanner.nextInt();
+
+		if (zahl % 7 == 0) {
+			System.out.println("Glück gehabt!");
+		} else {
+			System.out.println("Pech gehabt!");
+		}
+
+		scanner.close();
+	}
+	// m3
+	public static void AufgabeB() {
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Bitte geben Sie eine Zahl ein: ");
+		int zahl = scanner.nextInt();
+
+		if (zahl % 7 == 0 || zahl % 17 == 0 || zahl % 4 == 0) {
+			System.out.println("Glück gehabt!");
+		} else {
+			System.out.println("Pech gehabt!");
+		}
+
+		scanner.close();
+	}
+	// m4
+	public static void AufgabeC() {
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Bitte geben Sie eine Zahl ein: ");
+		int zahl = scanner.nextInt();
+
+		if (zahl % 7 == 0 && zahl % 17 == 0 && zahl % 4 == 0) {
+			System.out.println("JACKPOT gewonnen!");
+		} else if (zahl % 7 == 0 || zahl % 17 == 0 || zahl % 4 == 0) {
+			System.out.println("Glück gehabt!");
+		} else {
+			System.out.println("Pech gehabt!");
+		}
+
+		scanner.close();
+	}
+	// m5
+		public static void AufgabeD() {
+
+			Scanner scanner = new Scanner(System.in);
+
+			System.out.print("Bitte geben Sie eine Zahl ein: ");
+			int zahl = scanner.nextInt();
+
+			 if ((zahl % 7 == 0 || zahl % 17 == 0 || zahl % 4 == 0) && zahl % 13 == 0) {
+		            System.out.println("Pech gehabt!");
+		        } else if ((zahl % 7 == 0 && zahl % 17 == 0 && zahl % 4 == 0)) {
+		            System.out.println("JACKPOT gewonnen!");
+		        } else if ((zahl % 7 == 0 || zahl % 17 == 0 || zahl % 4 == 0)) {
+		            System.out.println("Glück gehabt!");
+		        } else {
+		            System.out.println("Pech gehabt!");
+		        }
+			
+			scanner.close();
+		}
+     // m6
+				public static void AufgabeE() {
+
+					Scanner scanner = new Scanner(System.in);
+
+					System.out.print("Bitte geben Sie eine Zahl ein: ");
+					int zahl = scanner.nextInt();
+
+					 if ((zahl % 7 == 0 && zahl % 17 == 0 && zahl % 4 == 0) && zahl % 13 == 0) {
+				            System.out.println("SUPER PECH!!!");
+				        } else if ((zahl % 7 == 0 || zahl % 17 == 0 || zahl % 4 == 0) && zahl % 13 == 0) {
+				            System.out.println("Pech gehabt!");
+				        } else if ((zahl % 7 == 0 && zahl % 17 == 0 && zahl % 4 == 0)) {
+				            System.out.println("JACKPOT gewonnen!");
+				        } else if ((zahl % 7 == 0 || zahl % 17 == 0 || zahl % 4 == 0)) {
+				            System.out.println("Glück gehabt!");
+				        } else {
+				            System.out.println("Pech gehabt!");
+				        }
+					
+					scanner.close();
+				}
+				  // m7
+			     	public static void AufgabeF() {
+						 // Zufallszahl zwischen 1 und 1.000.000 generieren
+				        Random random = new Random();
+				        int zahl = random.nextInt(1000000) + 1;
+                     
+					 if ((zahl % 7 == 0 && zahl % 17 == 0 && zahl % 4 == 0) && zahl % 13 != 0) {            // Überprüfen, ob die Zahl durch 7, 17, 4 und nicht durch 13 teilbar ist
+				            System.out.println("JACKPOT gewonnen!");
+				        } else if ((zahl % 7 == 0 && zahl % 17 == 0 && zahl % 4 == 0) && zahl % 13 == 0) {
+				            System.out.println("SUPER PECH!!!");
+				        } else if ((zahl % 7 == 0 && zahl % 17 == 0 && zahl % 4 == 0)) {
+				            System.out.println("JACKPOT gewonnen!");
+				        } else if ((zahl % 7 == 0 && zahl % 17 == 0) || (zahl % 7 == 0 && zahl % 4 == 0) || (zahl % 17 == 0 && zahl % 4 == 0)) {
+				            System.out.println("Pech gehabt!");
+				        } else if ((zahl % 7 == 0 || zahl % 17 == 0 || zahl % 4 == 0) && zahl % 13 == 0) {
+				            System.out.println("Pech gehabt!");
+				        } else if ((zahl % 7 == 0 || zahl % 17 == 0 || zahl % 4 == 0)) {
+				            System.out.println("Glück gehabt!");
+				        } else {
+				            System.out.println("Pech gehabt!");
+				        }
+			     	}
+}
+
